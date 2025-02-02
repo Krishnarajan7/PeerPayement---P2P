@@ -4,3 +4,4 @@ flask-sqlalchemy
 cryptography 
 pyjwt 
 requests
+mypy
