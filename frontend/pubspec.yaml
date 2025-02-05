@@ -1,15 +1,57 @@
+name: peer_payment_p2p  # 🔹 Project name (REQUIRED)
+description: A peer-to-peer offline payment system  
+publish_to: 'none'  # Prevents accidental publishing to pub.dev  
+
+version: 1.0.0+1  # Versioning  
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'  
+
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
-  flutter_blue_plus: ^1.3.2  # For Bluetooth communication
-  nfc_manager: ^3.2.1  # For NFC payments
-  sms_maintained: ^0.2.5  # For SMS-based transactions
-  flutter_secure_storage: ^9.0.0  # Securely store payment data
-  provider: ^6.1.0  # State management
-  dio: ^5.3.2  # API requests
-  firebase_core: ^2.15.0  # For optional cloud sync
-  firebase_auth: ^4.11.1  # User authentication
-  sqflite: ^2.2.8+4  # Local database
-  intl: ^0.18.1  # Date and currency formatting
-  qr_flutter: ^4.1.0  # QR Code for transactions
+  
+  # 🔹 UI & State Management
+  provider: ^6.0.5    
+  flutter_bloc: ^8.1.2 
+
+  # 🔹 Networking (For USSD, SMS, or Future Online Sync)
+  http: ^0.13.6        
+
+  # 🔹 Local Storage (For Offline Transactions)
+  shared_preferences: ^2.2.0  
+  hive: ^2.2.3               
+  hive_flutter: ^1.1.0       
+
+  # 🔹 Bluetooth & NFC (For Offline Payments)
+  flutter_blue_plus: ^1.5.0  
+  nfc_manager: ^3.2.0       
+
+  # 🔹 SMS (For Long-Distance Offline Transactions)
+  telephony: ^0.2.0         
+
+  # 🔹 QR Code (For Payment Scanning)
+  qr_flutter: ^4.1.0        
+  mobile_scanner: ^3.2.0    
+
+  # 🔹 Security (Encryption & Device Authentication)
+  encrypt: ^5.0.1           
+  local_auth: ^2.1.8        
+
+  # 🔹 UI Enhancements
+  cupertino_icons: ^1.0.6   
+  fluttertoast: ^8.2.2      
+  lottie: ^2.4.0           
+  shimmer: ^3.0.0          
+
+  # 🔹 Logging & Debugging
+  logger: ^2.0.2           
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  hive_generator: ^2.0.1    
+  build_runner: ^2.3.3      
+
+flutter:
+  uses-material-design: true
